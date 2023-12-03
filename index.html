@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà sách HBDK</title>
+    <link rel="icon" type="image/x-icon" href="./assest/image/logo.png">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="sidebar">
+            <div class="sidebar__logo">
+                <img src="./assest/image/logo.png" alt="" class="sidebar__logo-img">
+                <span class="sidebar__logo-title">NHÀ SÁCH HBDK</span>
+            </div>
+
+            <div class="feature">
+                <span class="feature__list-title">Chức năng của nhân viên</span>
+                <ul class="feature__list" id="feature__epl"></ul>
+            </div>
+            <div class="feature">
+                <span class="feature__list-title">Chức năng của nhân viên quản lý</span>
+                <ul class="feature__list" id="feature__leader"></ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content__item" id="dangnhap">
+                <h1 class="title">Chức năng đăng nhập:</h1>
+                <div class="img__parent">
+                    <img src="/assest/image/dangnhap1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Đăng nhập theo thông tin:<br>
+                    -	Tên đăng nhập là mã nhân viên<br>
+                    -	Mật khẩu <br>
+                    Sau đó nhấn nút “đăng nhập”<br>
+                </p>
+            </div>
+            <div class="content__item" id="quenmatkhau">
+                <h1 class="title">Chức năng quên mật khẩu</h1>
+                <p class="content__des">
+                    Nhập tên đăng nhập cần lấy lại mật khẩu và nhấn vào nút “quên mật khẩu” ở giao diện đăng nhập
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/quenmatkhau1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Hệ thống sẽ tự động tạo mã gôm 4 chữ số và gửi về email của nhân viên
+                    Sau khi nhận được mã xác nhận, nhập mã vào ô xác nhận và nhấn nút “xác nhận”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/quenmatkhau2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau đó nhập mật khẩu mới và xác nhận
+                </p>
+            </div>
+            <div class="content__item" id="taohoadon">
+                <h1 class="title">Chức năng tạo hóa đơn</h1>
+                <p class="content__des">
+                    Nhấn vào chức năng “bán hàng”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau đó nhân vào “Tạo mã hóa đơn” để tạo hóa đơn mới<br>
+                    Nhân viên tạo hóa đơn sẽ được cập nhật theo nhân viên đang đăng nhập trên hệ thống
+
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Danh sách các hóa đơn chờ vừa tạo sẽ được hiển thị ở đây.<br>
+                    Lưu ý: <br>
+                    -	Các hóa đơn chờ sẽ không được tự động lưu khi tắt chương trình<br>
+                    -	Trong danh sách hóa đơn chờ chỉ có một hóa đơn của khách hàng lẻ đồng thời<br>
+                    
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang4.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="capnhatkhachhangchohoadon">
+                <h1 class="title">Chức năng cập nhật khách hàng cho hóa đơn</h1>
+                <p class="content__des">
+                    Khách hàng mặc định khi tạo hóa đơn sẽ là khách hàng lẻ. Nếu muốn cập khách hàng hãy nhập vào ô sdt khách hàng và nhấn nút tìm
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang5.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau khi tìm khách hàng nếu có khách hàng thì khách hàng sẽ được tự động cập nhật vào hóa đơn. Nếu không tìm thấy khách hàng hệ thống sẽ thông báo không tìm thấy và khách hàng vẫn là khách hàng lẻ. Nếu khách hàng chưa có tài khoản thì có thể chuyển qua chức năng quản lý khách hàng để tạo thẻ thành viên.<br>
+                    Sau khi cập nhật khách hàng điểm tích lũy của khách hàng sẽ được hệ thống tự động cập nhật theo số điểm hiện có của khách hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang6.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="themsanphamvaogiohang">
+                <h1 class="title">Chức năng thêm sản phẩm vào giỏ hàng</h1>
+                <p class="content__des">
+                    Cách 1: Nhập mã sản phẩm<br>
+                    Nhập mã sản phẩm cần thêm vào giỏ hàng và nhấn tìm kiếm
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang7.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Cách 2: Tìm kiếm bằng cách quét mã<br>
+                    Đưa mã qr của sản phẩm vào khung quét mã
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang8.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau khi tìm kiếm sản phẩm. Nhấn vào nút “thêm” để thêm sản phẩm vào giỏ hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang9.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau khi nhấn nút thêm giao diện nhập số lượng sản phẩm sẽ được hiển thị<br>
+                    Lưu ý: <br>
+                    -	Số lượng sản phẩm phải là số nguyên dương và nhỏ hơn số lượng tồn kho của sản phẩm<br>
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang10.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau khi thêm sản phẩm thành công thông tin thanh toán sẽ được tự động cập nhật<br>
+                    Những sản phẩm nào đã tồn tại trong giỏ hàng thì sẽ không thể thêm lần nửa<br>
+                    Nếu muốn cập nhật số lượng có thể nhấn chức năng “Cập nhật số lượng bên dưới”<br>
+                </p>
+            </div>
+            <div class="content__item" id="thanhtoanhoadon">
+                <h1 class="title">Chức năng thanh toán hóa đơn</h1>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang11.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Thông tin thanh toán: <br>
+                    -	Tổng tiền: Tổng tiền của các sản phẩm trong giỏ hàng<br>
+                    -	Tên CTKM: Tên chương trình khuyến mãi mà hệ thống đang áp dụng<br>
+                    -	Tổng tiền CTKM: Tổng tiền giảm giá chương trình khuyến mãi của các sản phẩm trong giỏ hàng<br>
+                    -	Điểm giảm giá: Điểm giảm giá theo điểm tích lũy của khách hàng<br>
+                    -	Tổng tiền DGG: Tổng tiền từ điểm giảm giá (10.000 VND * điểm giảm giá)<br>
+                    -	Tổng thuế: Tổng thuế của các sản phẩm trong giỏ hàng<br>
+                    -	Thanh toán: Tổng tiền khách hàng cần thanh toán<br> <br>
+                    Nhập tiền khách đưa vào ô textField tiền khách đưa
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang12.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau khi nhập tiền khách đưa hệ thống sẽ tự động tính tiền thừa trả khách
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/banhang13.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Nhấn nút “thanh toán”để kết thanh toán<br>
+                    Lưu ý:<br>
+                    -	Không thể thanh toán nếu số tiền thừa trả khách nhỏ hơn không<br>
+                    -	Không thể thanh toán nếu không có sản phẩm trong giỏ hàng<br><br>
+                    Sau khi thanh toán thành công sẽ tự động in hóa đơn. Tồn kho của sản phẩm, số điểm thanh toán của khách hàng sẽ được tự động cập nhật<br>
+                    Nếu sau khi thanh toán xong khách hàng muốn chuyển qua đơn giao hàng có thể nhán nút “yes”
+                </p>
+            </div>
+            <div class="content__item" id="themsanpham">
+                <h1 class="title">Chức năng thêm sản phẩm</h1>
+                <p class="content__des">
+                    Bước 1: Chọn QL Sản phẩm ở thanh Sidebar
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/themsp1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Bước 2: Nhập các thông tin sản phẩm<br>
+                    -	Chọn nút Tạo mã, hệ thống phát sinh mã tự động hiện lên ô mã sản phẩm<br>
+                    -	Nhập mã nhà cung cấp sau đó nhấn nút Tìm tên nhà cung cấp sẽ hiện lên textfiled <br>
+                    -	Nhấn nút Chọn ảnh để tải lên hình sản phẩm<br>
+                    -	Nếu Thể loại nhập là “Giáo khoa” thì thuế là 0, còn lại thuế là 7<br>
+                    -	Sau khi nhập xong các thông khác trong phần thông tin chọn nút Thêm<br>
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/themsp2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Khi thêm sản phẩm thành công hệ thống sẽ hiện thông báo, chọn OK sản phẩm mới được thêm vào database
+                </p>
+            </div>
+            <div class="content__item" id="capnhatsanpham">
+                <h1 class="title">Chức năng cập nhật sản phẩm</h1>
+                <p class="content__des">
+                    Bước 1: Chọn sản phẩm cần cập nhật từ bảng, nhấp vào dòng để chọn, các thông tin của sản phẩm được chọn sẽ hiển thị lên các ô textfield
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/capnhatsp1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Bước 2: Chỉnh sửa những thông tin cần cập nhật sau đó chọn nút Cập nhật, thông tin sẽ được lưu xuống database, hệ thống hiển thị thông báo cập nhật thành công.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/capnhatsp2.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="timkiemsanpham">
+                <h1 class="title">Chức năng tìm kiếm sản phẩm</h1>
+                <p class="content__des">
+                    Tìm theo mã sản phẩm: nhập mã sản phẩm không phân biệt hoa thường vào ô tìm kiếm sau đó nhấn nút Tìm, sản phẩm tương ứng mã sẽ hiện lên bảng, nếu không có bảng sẽ rỗng. Muốn tải lại danh sách sản phẩm ban đầu nhấn nút Tải lại.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/timkiemsp1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Kiểm tra những sản phẩm số lượng dưới 10: tích vào checkbox danh sách sản phẩm có số lượng dưới 10 sẽ hiện lên bảng; bỏ tích bảng sẽ hiện lại danh sách ban đầu
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/timkiemsp2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Kiểm tra trạng thái của sản phẩm “Đang bán” hay “Không còn bán”: chọn trạng thái trong combobox, danh sách sản phẩm tương ứng sẽ hiện lên bảng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/timkiemsp3.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Tìm kiếm theo nhiều trường: chọn mã nhà cung cấp và nhập bất kỳ thông tin ở trường nào sản phẩm sẽ dựa theo những gì đã nhập khớp thì hiện lên bảng 
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/timkiemsp4.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="thongkecanhan">
+                <h1 class="title">Chức năng thống kê cá nhân</h1>
+                <div class="img__parent">
+                    <img src="/assest/image/thongkecanhan.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Thống kê cá nhân:<br>
+                    - Nhấn vào tabbedpane Cá nhân để sang tab thống kê cá nhân<br>
+                    - Chọn combobox những tuần trong tháng để có thể thống kê các dữ liệu các ngày trong tuần được chọn<br>
+                </p>
+            </div>
+            <div class="content__item" id="quanlyhoadon">
+                <h1 class="title">Chức năng quản lý hóa đơn</h1>
+                <p class="content__des">
+                    Nhấn vào chức năng “bán hàng” và nhấn vào tab “quản lý hóa đơn”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlhoadon1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    1.	Lọc hóa đơn<br>
+                    Nhập các thông tin cần tìm kiếm vào phần tìm kiếm
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlhoadon2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Nhấn nút “Lọc hóa đơn” để lọc hóa đơn
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlhoadon3.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    2.	In hóa đơn<br>
+                    Chọn một hóa đơn dưới bảng danh sách hóa đơn
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlhoadon4.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau đó nhấn “in hóa đơn”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlhoadon5.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    3.	Tạo hóa đơn giao hàng<br>
+                    Chọn một hóa đơn dưới bảng danh sách hóa đơn
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlhoadon4.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau đó nhấn “tạo hóa đơn” hóa đơn sẽ tự động chuyển qua đơn giao hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlhoadon6.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="quanlykhachhang">
+                <h1 class="title">Chức năng quản lý khách hàng</h1>
+                <p class="content__des">
+                    Nhấn vào chức năng  “quản lý khách hàng”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlkhachhang1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    1.	Thêm khách hàng<br>
+                    Nhấn nút “tạo mã sản khách hàng”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlkhachhang2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Hệ thống sẽ tự động tạo mã khách hàng sao cho không trùng lặp và cập nhật vào ô mã khách hàng<br>
+                    Điền đầy đủ thông tin của khách hàng và nhấn vào nút thêm khách hàng<br>
+                    Lưu ý: <br>
+                    -	Tên khách hàng không chứa số và ký tự đặc biệt<br>
+                    -	Số điện thoại phải bắt đầu bằng 02, 03, 05, 07, 08, 09 và có 10 ký tự số (không chứa ký tự nào khác ngoài số)<br>
+                    -	Nhập đúng định dạng của email<br><br>
+                    2.	Cập nhật khách hàng<br>
+                    Chọn khách hàng cần cập nhật dưới bảng danh sách khách hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/qlkhachhang3.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Sau đó điền các thông tin cần cập nhật tương tự như thêm khác hàng và nhấn nút “Cập nhật”
+                </p>
+            </div>
+            <div class="content__item" id="taodongiaohang">
+                <h1 class="title">Chức năng tạo đơn giao hàng</h1>
+                <p class="content__des">
+                    B1. Cần phải chọn 1 hóa đơn bên tab bán hàng trong phần quản lý hóa đơn và chọn chức năng tạo đơn giao hàng để chuyển sang giao diện giao hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B2. Giao diện giao hàng với thông tin hóa đơn xuất hiện
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B3. Tiến hành tạo mã đơn giao hàng trước bằng cách nhấn nút chức năng “Tạo mã đơn hàng” và hệ thống sẽ khởi tạo 1 mã đơn hàng mới cho hóa đơn đang lập đơn giao hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang3.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B4. Tiến hành nhập thông tin người khách hàng bao gồm địa tên khách hàng, số điện thoại, số kg và chọn phương thức thanh toán đơn hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang4.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Hoặc có thể chọn vào ô checkbox “chọn khách hàng mặc định” để hiển thị thông tin khách hàng đã mua hóa đơn này (không áp dụng cho khách hàng chưa là thành viên của cửa hàng)
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang5.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B5. Chọn chức năng tính khoảng cách để tính tiền vận chuyển bằng cách nhấn nút “Khoảng cách”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang6.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B6. Nhập địa chỉ giao hàng trên giao diện map được hiện ra sau B5
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang7.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B7. Người dùng nhấn nút tìm và sau đó chọn nút hoàn tất để hiển thị quảng đường, địa chỉ và giá tiền vận chuyển trên giao diện giao hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang8.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B8.Nhấn nút "Tạo đơn hàng" để tạo 1 đơn hàng và lưu trư và cơ sở dữ liệu đồng thời cũng sẽ hiện lên trên bảng xem đơn hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/giaohang9.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="inphieugiaohang">
+                <h1 class="title">Chức năng in phiếu giao hàng</h1>
+                <p class="content__des">
+                    B1. Chọn đơn giao hàng cần in bằng cách click vào bảng danh sách đơn giao hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/inphieugiaohang1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B2. Nhấn nút “In phiếu đơn hàng” để in đơn giao hàng, hệ thống sẽ thông báo in phiếu đơn hàng thành công sau khi in xong
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/inphieugiaohang2.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="huydonhang">
+                <h1 class="title">Chức năng hủy đơn giao hàng</h1>
+                <p class="content__des">
+                    B1. Chọn đơn hàng cần hủy
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/inphieugiaohang1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B2. Nhấn nút “Bị hủy” để tiến hành hủy đơn giao hàng
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/huydonhang1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B3. Nhập lý do hủy đơn hàng và xác nhận hủy
+                </p>
+            </div>
+            <div class="content__item" id="dongiaohangthanhcong">
+                <h1 class="title">Chức năng xác nhận đơn giao hàng thành công</h1>
+                <p class="content__des">
+                    B1. Chọn đơn giao hàng thành công
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/inphieugiaohang1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B2. Nhấn nút “Thành công” để xác nhận giao hàng thành công, hệ thống thông báo “Đơn giao hàng thành công”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/dongiaohangthanhcong1.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="loctheomuckhuyenmai">
+                <h1 class="title">Chức năng lọc theo mục khuyến mãi</h1>
+                <p class="content__des">
+                    B1. Chọn chương trình khuyến mãi cần lọc
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/loctheomuckhuyenmai1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B2. Chọn mục khuyến mãi cần lọc để xem kết quả
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/loctheomuckhuyenmai2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Lưu ý: Nếu chưa chọn chương trình khuyến mãi cần lọc thì hệ thống sẽ thống báo lỗi “Chỉ lọc khi đã chọn chương trình khuyến mãi”
+                </p>
+            </div>
+            
+            <div class="content__item" id="themnhacungcap">
+                <h1 class="title">Chức năng thêm nhà cung cấp</h1>
+                <p class="content__des">
+                    Bước 1: Chọn QL Nhà cung cấp ở thanh Sidebar
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/themncc1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Bước 2: Nhập các thông tin nhà cung cấp<br>
+                    -	Chọn nút Tạo mã, hệ thống phát sinh mã tự động hiện lên ô Mã nhà cung cấp<br>
+                    -	Sau khi nhập xong các thông khác trong phần thông tin chọn nút Thêm<br>
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/themncc2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Khi thêm nhà cung cấp thành công hệ thống sẽ hiện thông báo, chọn OK nhà cung cấp mới được thêm vào database
+                </p>
+            </div>
+            <div class="content__item" id="capnhatnhacungcap">
+                <h1 class="title">Chức năng cập nhật nhà cung cấp</h1>
+                <p class="content__des">
+                    Bước 1: Chọn nhà cung cấp cần cập nhật từ bảng, nhấp vào dòng để chọn, các thông tin của nhà cung cấp được chọn sẽ hiển thị lên các ô textfield
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/capnhatncc1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Bước 2: Chỉnh sửa những thông tin cần cập nhật sau đó chọn nút Cập nhật, thông tin sẽ được lưu xuống database, hệ thống hiển thị thông báo cập nhật thành công.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/capnhatncc2.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="timkiemnhacungcap">
+                <h1 class="title">Chức năng tìm kiếm nhà cung cấp</h1>
+                <p class="content__des">
+                    Nhập số điện thoại, tên nhà cung cấp lần lượt vào các ô tìm kiếm, chọn địa chỉ trong combobox, thông tin trùng khớp sẽ hiện lên bảng.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/timkiemncc.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="themnhanvien">
+                <h1 class="title">Chức năng thêm nhân viên</h1>
+                <p class="content__des">
+                    Bước 1: Chọn QL Nhân viên ở thanh Sidebar
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/themnhanvien1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Bước 2: Nhập các thông tin nhân viên<br>
+                    -	Chọn nút Tạo mã, hệ thống phát sinh mã tự động hiện lên ô mã nhân viên và tên tài khoản<br>
+                    -	Nhấn nút Chọn ảnh để tải lên hình ảnh nhân viên<br>
+                    -	Sau khi nhập xong các thông khác trong phần thông tin và tài khoản sau đó chọn nút Thêm<br>
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/themnhanvien3.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Khi thêm nhân viên thành công hệ thống sẽ hiện thông báo, chọn OK nhân viên mới được thêm vào database
+                </p>
+            </div>
+            <div class="content__item" id="capnhatnhanvien">
+                <h1 class="title">Chức năng cập nhật nhân viên</h1>
+                <p class="content__des">
+                    Bước 1: Chọn nhân viên cần cập nhật từ bảng, nhấp vào dòng để chọn, các thông tin của nhân viên được chọn sẽ hiển thị lên các ô textfield<br>
+                    Bước 2: Chỉnh sửa những thông tin cần cập nhật<br>
+                    Bước 3: Chọn nút Cập nhật, thông tin sẽ được lưu xuống database, hệ thống hiển thị thông báo cập nhật thành công.<br>
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/themnhanvien.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="timkiemnhanvien">
+                <h1 class="title">Chức năng tìm kiếm nhân viên</h1>
+                <p class="content__des">
+                    Tìm nhân viên theo mã: nhập mã nhân viên không phân biệt hoa thường vào ô tìm kiếm sau đó nhấn nút Tìm, nhân viên tương ứng mã sẽ hiện lên bảng, nếu không có bảng sẽ rỗng. Muốn tải lại danh sách nhân viên ban đầu nhấn nút Tải lại.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/timkiemnv1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Tìm kiếm tương đối theo số điện thoại hoặc tên nhân viên: nhập số điện thoại hoặc tên nhân viên vào ô tìm kiếm, thông tin trùng khớp sẽ hiện lên bảng, xóa thông tin trong ô tìm kiếm dữ liệu bảng quay lại ban đầu
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/timkiemnv2.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="locnhanvien">
+                <h1 class="title">Chức năng lọc nhân viên</h1>
+                <p class="content__des">
+                    Theo giới tính: đầu tiên chọn giới tính cần lọc sau đó nhấn nút Giới tính
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/locnv1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Theo chức vụ: đầu tiên chọn chức vụ trong combobox sau đó nhấn nút Chức vụ
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/locnv2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Theo trạng thái: đầu tiên tích hoặc bỏ tích ở checkbox sau đó nhấn nút Trạng thái
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/locnv3.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="taodondoitra">
+                <h1 class="title">Chức năng tạo đơn đổi trả</h1>
+                <p class="content__des">
+                    Chọn chức năng đổi trả hàng từ thanh sidebar
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Nhập số điện thoại khách hàng đã tạo tài khoản và bấm tìm kiếm để tìm hóa đơn cần thực hiện đổi trả
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Hiện hóa đơn đã được mua bởi tài khoản khách hành này trong 7 ngày gần nhất
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra3.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Chọn hóa đơn cần đổi trả<br>
+                    Thông tin hóa đơn được hiện thị tại phần đánh dấu<br>
+                    - Thông tin hóa đơn<br>
+                    - Danh sách sản phẩm trong hóa đơn <br>
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra4.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    - Chọn phương thức bao gồm: Đổi hàng và trả tiền
+                    - Bấm tạo đơn để bắt đầu tạo đơn đổi trả
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra5.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Thông tin đơn đổi trả được khỏi tạo<br>
+                    - Mã đơn đổi trả <br>
+                    - Chương trình khuyến mãi được sử dụng trong hóa đơn được đổi trả<br>
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra6.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Chọn sản phẩm muốn đổi trả và bấm thêm để thêm sản phẩm vào đơn đổi trả
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra7.png" alt="" class="content__img">
+                </div>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra6.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Chọn sản phẩm muốn đổi trả và bấm thêm để thêm sản phẩm vào đơn đổi trả
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra7.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Nhập lý do và số lượng muốn đổi trả<br>
+                    Lưu ý: Số lượng phải là số dương và (+ số lượng trong giỏ hàng đơn đổi trả nếu chọn sản phẩm trùng ) <= số lượng trong hóa đơn
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra8.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    - Nếu phương thức là đổi hàng thì khi sản phẩm thêm thành công vào đơn đổi trả thì Tổng số lượng sản phẩm đổi hàng sẽ được cộng thêm.<br>
+                    - Sau đó ấn hoàn thành thành đơn để tạo xong một đơn đổi trả.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra9.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Nếu phương thức là trả tiền thì số tiền phải trả sẽ được cộng thêm theo cách tính:<br>
+                    - Nếu số điểm đổi trả đã sử dụng ở hóa đơn> 50% số tiền, thì sẽ hoàn trả lại số điểm tương ứng với 50% số tiền và trả lại 50% số tiền còn lại<br>
+                    - Còn nếu số điểm đổi trả <= 50% số tiền, thì sẽ hoàn trả lại tất cả điểm cho khách hàng.<br>
+                    Nhấn hoàn thành đơn để tạo thành công đơn đổi trả.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taodondoitra10.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="thongkenhanvien">
+                <h1 class="title">Chức năng thống kê nhân viên</h1>
+                <p class="content__des">
+                    Thống kê nhân viên:<br>
+                    - Nhấn vào tabbedpane Nhân viên để sang tab thống kê nhân viên<br>
+                    - Chọn combobox những tháng trong năm để có thể lấy dữ liệu từ bảng thống kê và biểu đồ của tháng được chọn.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/thongkenhanvien.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="thongkecuahang">
+                <h1 class="title">Chức năng thống kê cửa hàng</h1>
+                <p class="content__des">
+                    Thống kê cửa hàng:<br>
+                    - Nhấn vào tabbedpane Cửa hàng để sang tab thống kê cửa hàng.<br>
+                    - Chọn combobox những năm để có thể thống kê các Quý của năm được chọn<br>
+                    - Chọn combobox những tháng trong năm để có thể lấy dữ liệu từ bảng thống tháng được chọn.
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/thongkecuahang.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="thongkesanpham">
+                <h1 class="title">Chức năng thống kê sản phẩm</h1>
+                <p class="content__des">
+                    Thống kê sản phẩm:<br>
+                    - Nhấn vào tabbedpane Sản phẩm để sang tab thống kê sản phẩm<br>
+                    - Chọn combobox bán chạy nhất và ít nhất, trong Quý được chọn bên combobox các Quý
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/thongkesanpham.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="taokhuyenmai">
+                <h1 class="title">Chức năng tạo khuyến mãi</h1>
+                <p class="content__des">
+                    B1. Chọn QL Khuyến mãi ở thanh Sidebar
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taokhuyenmai1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B2. Chọn chức năng tạo mã chương trình khuyến mãi bằng cách nhấn nút “Tạo mã CTKM”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taokhuyenmai2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B3. Nhập tên chương trình khuyến mãi
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taokhuyenmai3.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B4. Tạo các mục khuyến mãi cho chương trình bằng cách sau:<br>
+                    a.	Chọn sản phẩm -> nhập phần trăm -> chọn thể loại
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taokhuyenmai4.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    b.	Chọn chức năng “Thêm” để tạo mục khuyến mãi và đưa vào bảng “Danh sách các mục khuyến mãi đang tạo”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taokhuyenmai5.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B5. Chọn chức năng “Lưu” để tạo chương trình khuyến mãi, chương trình khuyến mãi vừa được tạo sẽ hiển thị bên bảng danh sách chương trình khuyến mãi
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/taokhuyenmai6.png" alt="" class="content__img">
+                </div>
+            </div>
+            <div class="content__item" id="thaydoitrangthaiCtkm">
+                <h1 class="title">Chức năng thay đổi trạng thái chương trình khuyến mãi</h1>
+                <p class="content__des">
+                    B1. Chọn chương trình khuyến mãi cần thay đổi trạng thái
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/thaydoictkm1.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    B2. Chọn chức năng “Áp dụng chương trình khuyến mãi”
+                </p>
+                <div class="img__parent">
+                    <img src="/assest/image/thaydoictkm2.png" alt="" class="content__img">
+                </div>
+                <p class="content__des">
+                    Hệ thống sẽ đổi trạng thái chương trình khuyến mãi được chọn sang “Đang áp dụng” và chuyển toàn bộ trạng thái của các chương trình khuyến mãi còn lại về không áp dụng
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
